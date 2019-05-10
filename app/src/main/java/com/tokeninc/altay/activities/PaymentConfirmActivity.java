@@ -65,10 +65,11 @@ public class PaymentConfirmActivity extends AppCompatActivity {
         String content = new StringBuilder("{\"returnCode\":1000,\"returnDesc\":\"success\"," +
                 "\"receiptMsgCustomer\":\"beko Campaign\",\"receiptMsgMerchant\":\"beko Campaign Merchant\"," +
                 "\"paymentInfoList\":[{\"paymentProcessorID\":67,\"paymentActionList\":[{\"paymentType\":3," +
-                "\"amount\":").append(qr.getTransactionAmount()).append(",\"currencyID\":")
-                .append(qr.getTransactionCurrency()).append(",\"vatRate\":")
-                .append(qr.getVatStr().split("-")[0]).append("}]}],\"QRdata\":\"")
-                .append(qr.getCompleteQRcontent()).append("\"}").toString();
+                "\"amount\":").append(qr.getTransactionAmount())
+                .append(",\"currencyID\":").append(qr.getTransactionCurrency())
+                .append(",\"vatRate\":").append(qr.getVatStr().split("-")[0])
+                .append("}]}],\"QRdata\":\"").append(qr.getCompleteQRcontent())
+                .append("\"}").toString();
 
         ConnectionUtility.post(ConnectionUtility.PAYMENT_URL_STRING, content, new Callback() {
             @Override
@@ -94,7 +95,6 @@ public class PaymentConfirmActivity extends AppCompatActivity {
                 });
                 try {
                     Intent intent = new Intent(PaymentConfirmActivity.this, PaymentEndPageActivity.class);
-                    //intent.putExtra("qr", qr.getCompleteQRcontent());
                     intent.putExtra("result", 0);
                     startActivity(intent);
                 } catch (Exception e) {

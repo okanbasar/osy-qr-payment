@@ -8,8 +8,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.tokeninc.altay.R;
-import com.tokeninc.altay.models.QRModel;
-import com.tokeninc.altay.utilities.QRUtility;
 
 import pl.droidsonroids.gif.AnimationListener;
 import pl.droidsonroids.gif.GifDrawable;
@@ -59,6 +57,5 @@ public class PaymentEndPageActivity extends AppCompatActivity  implements Animat
     @Override
     public void onAnimationCompleted(int loopNumber) {
         gifDrawable.stop();
-
     }
 }

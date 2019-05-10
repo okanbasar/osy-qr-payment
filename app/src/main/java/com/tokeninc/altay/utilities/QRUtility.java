@@ -72,7 +72,6 @@ public class QRUtility {
                         break;
                     default:   // UNDEFINED QR TAG !!!
                         break;
-
                 }
             }
         } catch (Exception e) {

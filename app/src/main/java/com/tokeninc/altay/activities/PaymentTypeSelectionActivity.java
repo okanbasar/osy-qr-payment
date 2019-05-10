@@ -12,7 +12,6 @@ import com.tokeninc.altay.models.QRModel;
 import com.tokeninc.altay.utilities.QRUtility;
 import com.tokeninc.altay.R;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -20,16 +19,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import okhttp3.Response;
-
 public class PaymentTypeSelectionActivity extends AppCompatActivity {
 
     private static final int OPEN_DOCUMENT_REQUEST_CODE = 100;
 
     private Button readQRContentFromServerButton;
     private Button readQRContentFromFileSystemButton;
-
-    private Response response;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,7 +96,7 @@ public class PaymentTypeSelectionActivity extends AppCompatActivity {
         StringBuilder stringBuilder = new StringBuilder();
         String currentLine;
         while ((currentLine = reader.readLine()) != null) {
-            stringBuilder.append(currentLine + "\n");
+            stringBuilder.append(currentLine).append("\n");
         }
         if (inputStream != null) {
             inputStream.close();

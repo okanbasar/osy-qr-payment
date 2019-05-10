@@ -15,7 +15,6 @@ import com.tokeninc.altay.utilities.ConnectionUtility;
 import com.tokeninc.altay.utilities.QRUtility;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -50,6 +49,7 @@ public class PaymentEnterInfoActivity extends AppCompatActivity {
                 if (!input.trim().equals("") && !input.trim().equals(".") && !input.trim().equals(",")) {
                     getQRContentFromServer(Math.round(Double.parseDouble(input) * 100));
                 } else {
+                    progressBar.setVisibility(View.GONE);
                     continueButton.setClickable(true);
                     Toast.makeText(getApplicationContext(), "Please enter an amount!", Toast.LENGTH_LONG).show();
                 }
