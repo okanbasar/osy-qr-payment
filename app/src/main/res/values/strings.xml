@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Altay</string>
+    <string name="payment_type_selection_activity_title">Payment Type Selection</string>
+    <string name="payment_enter_info_activity_title">Payment Info</string>
+    <string name="payment_confirm_activity_title">Payment Info</string>
+    <string name="payment_end_page_activity_title">Result</string>
+    <string name="read_qr_content_from_filesystem">Select a file containing QR content in JSON syntax (.txt)</string>
+    <string name="read_qr_content_from_server">Enter the Payment Amount</string>
+    <string name="enter_info_amount_label">Amount</string>
+    <string name="enter_info_continue_button_title">Continue</string>
+    <string name="confirm_button_title">Confirm</string>
+    <string name="end_page_button_title">New Payment</string>
+    <string name="end_page_success_message">Your payment is completed successfully.</string>
+    <string name="end_page_failure_message">Your payment cannot be completed right now. Please try again later.</string>
+</resources>
